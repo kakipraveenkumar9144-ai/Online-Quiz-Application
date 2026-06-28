@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+  <head>
+    {% load static %}
+
+    <title>Online Quiz</title>
+
+    <link rel="stylesheet" href="{% static 'css/quiz.css' %}" />
+  </head>
+
+  <body>
+    <div class="quiz-box">
+      <h1>Online Quiz</h1>
+
+      <div class="top-bar">
+        <div class="question-number">Question {{ current }} / {{ total }}</div>
+      </div>
+
+      <form method="POST" id="quizFrom">
+        {% csrf_token %}
+
+        <div class="question-card">
+          <h2>{{ question.question }}</h2>
+
+          <label class="option">
+            <input
+              type="radio"
+              name="answer"
+              value="{{ question.option1 }}"
+              {%
+              if
+              selected=""
+              ="question.option1"
+              %}checked{%
+              endif
+              %}
+            />
+
+            A. {{ question.option1 }}
+          </label>
+
+          <label class="option">
+            <input
+              type="radio"
+              name="answer"
+              value="{{ question.option2 }}"
+              {%
+              if
+              selected=""
+              ="question.option2"
+              %}checked{%
+              endif
+              %}
+            />
+
+            B. {{ question.option2 }}
+          </label>
+
+          <label class="option">
+            <input
+              type="radio"
+              name="answer"
+              value="{{ question.option3 }}"
+              {%
+              if
+              selected=""
+              ="question.option3"
+              %}checked{%
+              endif
+              %}
+            />
+
+            C. {{ question.option3 }}
+          </label>
+
+          <label class="option">
+            <input
+              type="radio"
+              name="answer"
+              value="{{ question.option4 }}"
+              {%
+              if
+              selected=""
+              ="question.option4"
+              %}checked{%
+              endif
+              %}
+            />
+
+            D. {{ question.option4 }}
+          </label>
+        </div>
+
+        <div class="button-group">
+          {% if current > 1 %}
+
+          <button type="submit" name="action" value="back" class="back-btn">
+            Previous
+          </button>
+
+          {% endif %} {% if current == total %}
+
+          <button type="submit" name="action" value="submit" class="submit-btn">
+            Submit
+          </button>
+
+          {% else %}
+
+          <button type="submit" name="action" value="next" class="next-btn">
+            Next
+          </button>
+
+          {% endif %}
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

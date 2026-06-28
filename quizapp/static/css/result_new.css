@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #667eea, #754ba2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 900px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 60px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.tick {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #dff7df;
+  color: #28a745;
+  font-size: 45px;
+  line-height: 80px;
+  font-weight: bold;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  margin: 40px 0;
+}
+
+.box {
+  flex: 1;
+}
+
+.box h1 {
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  border-radius: 50%;
+  color: white;
+  line-height: 120px;
+  font-size: 38px;
+}
+
+.green h1 {
+  background: #4caf50;
+}
+
+.gray h1 {
+  background: #555;
+}
+
+.red h1 {
+  background: #ff4d6d;
+}
+
+.orange h1 {
+  background: #ff9800;
+}
+
+.box p {
+  margin-top: 15px;
+  font-size: 17px;
+  color: #444;
+  font-weight: bold;
+}
+
+.percentage {
+  margin: 30px 0;
+  font-size: 32px;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 15px 35px;
+  text-decoration: none;
+  color: white;
+  background: #ff4d6d;
+  border-radius: 30px;
+  font-size: 18px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #e63956;
+  transform: translateY(-3px);
+}

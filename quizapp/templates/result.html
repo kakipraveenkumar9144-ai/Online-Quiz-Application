@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    {% load static %}
+    <title>Quiz Result</title>
+
+    <link rel="stylesheet" href="{% static 'css/result_new.css' %}" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="tick">✓</div>
+
+      <h2>Your Quiz Has Been Submitted!</h2>
+
+      <h3>Score Card</h3>
+
+      <div class="card">
+        <div class="box gray">
+          <h1>{{ total }}</h1>
+          <p>Total Questions</p>
+        </div>
+
+        <div class="box green">
+          <h1>{{ correct }}</h1>
+          <p>Correct Answers</p>
+        </div>
+
+        <div class="box red">
+          <h1>{{ wrong }}</h1>
+          <p>Wrong Answers</p>
+        </div>
+
+        <div class="box orange">
+          <h1>{{ not_answered }}</h1>
+          <p>Not Answered</p>
+        </div>
+      </div>
+
+      <div class="percentage">Percentage : {{ percentage }}%</div>
+
+      <a href="/quiz/" class="btn">Re Attempt</a>
+
+      <a href="/" class="btn">Go Home</a>
+    </div>
+  </body>
+</html>

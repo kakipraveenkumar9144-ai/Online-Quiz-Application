@@ -1,0 +1,30 @@
+{% load static %}
+
+<!doctype html>
+<html>
+  <head>
+    <title>Online Quiz Application</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+
+  <body>
+    <div class="container">
+      <img src="{% static 'image/logo.png' %}" class="logo" alt="Logo" />
+
+      <h1>Online Quiz Application</h1>
+
+      <p>Test Your Knowledge With Exciting Quizzes</p>
+
+      <div class="buttons">
+        <a href="/register">
+          <button class="btn">Register</button>
+        </a>
+
+        <a href="/login">
+          <button class="btn">Login</button>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
